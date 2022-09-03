@@ -3898,9 +3898,10 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Browser,
 		C3.Plugins.System.Cnds.IsGroupActive,
 		C3.Plugins.System.Cnds.OnLayoutStart,
-		C3.Plugins.Browser.Acts.RequestFullScreen,
 		C3.Behaviors.Physics.Acts.EnableCollisions,
 		C3.Plugins.Audio.Acts.Play,
+		C3.Plugins.System.Acts.Wait,
+		C3.Plugins.Browser.Acts.RequestFullScreen,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Plugins.Audio.Acts.PlayByName,
@@ -4053,12 +4054,12 @@ self.C3_ExpressionFuncs = [
 		() => "StartUp",
 		() => 0,
 		() => "",
+		() => 1,
 		() => "Logic",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0("cut1", "cut2");
 		},
-		() => 1,
 		() => "left",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
